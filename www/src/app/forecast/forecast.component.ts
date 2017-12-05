@@ -35,7 +35,7 @@ export class ForecastComponent implements OnInit {
 
             inWeek.setDate(today.getDate() + days);
 
-            return inWeek.getDate();
+            return inWeek.getDate() + '.' + inWeek.getMonth()+1;
         }
 
         data.forEach(item => {

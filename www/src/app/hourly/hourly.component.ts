@@ -19,7 +19,7 @@ export class HourlyComponent implements OnInit {
             this.timeLine = this.getTimeLine();
             const length = this.timeLine.length - 1;
 
-            data.forEach( val => {val.items.length = length});
+            if(data && data instanceof Array && data.forEach) data.forEach( val => {val.items.length = length});
 
             this.hourlyData = data;
 
@@ -34,7 +34,7 @@ export class HourlyComponent implements OnInit {
     getTimeLine(){
         const date = new Date();
         const time = date.getHours();
-        let result = [''];
+        let result: any[] = [''];
 
         for(let i = time; i<25; i++){
             result.push(i);
