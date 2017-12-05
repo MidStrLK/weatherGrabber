@@ -1,0 +1,68 @@
+{
+    "actual": [
+        {
+            "name": "yandex",
+            "label":"Яндекс",
+            "url":  "http://yandex.ru/pogoda/moscow",
+            "text": "div.content__main > div.content__row > div.fact > div.fact__condition.day-anchor.i-bem",
+            "temp": "div.content__main > div.content__row > div.fact > a.link.fact__basic > div > span.temp__value"
+        },
+        {
+            "name": "gismeteo",
+            "label":"Gismeteo",
+            "url":  "https://www.gismeteo.ru/weather-moscow-4368/now/",
+            "text": "body > section.content > div > div > div.main > div.__frame_sm > div.forecast_frame.forecast_now > div.forecast_wrap.horizontal > div > div.now__desc > span",
+            "temp": "body > section.content > div > div > div.main > div.__frame_sm > div.forecast_frame.forecast_now > div.tabs._left > div > div > div.tab-content > div.tab-weather > div.js_meas_container.temperature.tab-weather__value > span"
+        },
+        {
+            "name": "weather",
+            "label":"weather.com",
+            "url":  "https://weather.com/ru-RU/weather/today/l/RSMK0013:1:RS",
+            "text": ".today > .section-page-name > .layout-centered > .hero-flex > .region-hero-left > div > section > .today-card-other-snow > div > .today_nowcard-phrase",
+            "temp": ".today > .section-page-name > .layout-centered > .hero-flex > .region-hero-left > div > section > .today-card-other-snow > div > .today_nowcard-temp > span"
+        }
+    ],
+    "hourly": [
+        {
+            "name": "yandex",
+            "label": "Яндекс",
+            "url": "https://yandex.ru/pogoda/moscow/details",
+            "text": ".forecast-details__day-info table tr > td.weather-table__body-cell.weather-table__body-cell_type_condition",
+            "temp": ".forecast-details table tr > td.weather-table__body-cell.weather-table__body-cell_type_feels-like > div > .temp__value",
+            "time": "dayTime"
+        },{
+            "name": "gismeteo",
+            "label": "Gismeteo",
+            "url": "https://www.gismeteo.ru/weather-moscow-4368/",
+            "text": "body > section > div > div > div > div > div > div > div > div > div > div > div > div > span",
+            "temp": "body > section > div > div > div > div > div > div > div > div > div > div > div > div > div > div",
+            "tempCut": 2,
+            "time": "body > section > div > div > div > div > div > div > div > div > div > div > div > div > span"
+        },
+        {
+            "name": "weather",
+            "label":"weather.com",
+            "url":  "https://weather.com/ru-RU/weather/hourbyhour/l/RSMK0013:1:RS",
+            "text": "#twc-scrollabe > table > tbody > tr > .hidden-cell-sm > span",
+            "temp": "#twc-scrollabe > table > tbody > tr > .temp > span",
+            "time": "#twc-scrollabe > table > tbody > tr > td > div > .hourly-time > span",
+            "actualWeather": true
+        }
+    ],
+    "forecast": [
+        {
+            "name": "yandex",
+            "label": "Яндекс",
+            "url": "https://yandex.ru/pogoda/moscow",
+            "text": ".content .forecast-briefly .forecast-briefly__condition",
+            "temp": ".forecast-briefly .temp.forecast-briefly__temp.forecast-briefly__temp_day > .temp__value"
+        },{
+            "name": "weather",
+            "label": "weather.com",
+            "url": "https://weather.com/ru-RU/weather/tenday/l/RSMK0013:1:RS",
+            "text": "#twc-scrollabe > table > tbody > tr > .description > span",
+            "temp": "#twc-scrollabe > table > tbody > tr > .temp > div > span",
+            "onlyOdd": true
+        }
+    ]
+}

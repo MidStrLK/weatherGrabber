@@ -1,0 +1,22 @@
+<h1 class="title">Почасовой</h1>
+
+<div class="request_is_active" *ngIf="hourlyRequestIsActive"></div>
+
+
+<table class="hourly_table container" *ngIf="!hourlyRequestIsActive">
+    <tr class="hourly_time_tr">
+        <td *ngFor="let timeH of timeLine" class="hourly_time">
+            {{timeH}}<sup *ngIf="timeH">00</sup>
+        </td>
+    </tr>
+
+    <tr *ngFor="let piece of hourlyData" class="hourly_tr">
+        <td class="hourly_name">{{piece.label}}</td>
+        <td *ngFor="let item of piece.items" class="hourly_td">
+            <span class="hourly_temp">{{(item && item.temp) ? item.temp : ''}}</span>
+            <br>
+            <span class="hourly_text">{{(item && item.text) ? item.text : ''}}</span>
+        </td>
+    </tr>
+
+</table>

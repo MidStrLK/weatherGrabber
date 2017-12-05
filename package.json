@@ -1,0 +1,24 @@
+{
+  "name": "destiny-fireteam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "utf8": "^2.1.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "node-telegram-bot-api": "^0.29.0",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0",
+    "utf8": "^2.1.2"
+  }
+}
